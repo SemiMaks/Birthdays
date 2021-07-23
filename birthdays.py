@@ -22,8 +22,15 @@ def main():
 
     # Инициализировать переменную для выбора пользователя.
     choice = 0
-    print('В списке есть следующие имена: ')
-    birthdays.items()
+    print('Сохранены следующие имена: ')
+    try:
+        f = open('birthdays.txt', 'r')
+        text = f.read()
+        print(text)
+        f.close()
+    except:
+        print('Пока нет ни одной записи.')
+
     while choice != QUIT:
         # Получить выбранный пользователем пункт меню.
         choice = get_menu_choice()
