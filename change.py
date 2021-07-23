@@ -8,6 +8,7 @@ def change(birthdays):
     if name in birthdays:
         # Получить новый день рождения.
         bday = input('Введите новую дату рождения: ')
+        print('Новое значение: ', name, '-', bday)
 
         # Обновить запись.
         birthdays[name] = bday
